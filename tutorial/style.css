@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 800px; /* Fixed width */
+    /* max-width: 50%;  */
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-box {
+    padding: 20px;
+    height: 450px;
+    overflow-y: auto; /* Allow vertical scrolling */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.message {
+    display: flex; /* Use flexbox to align image and text */
+    align-items: flex-start; /* Align items to the start */
+    margin: 10px 0;
+    padding: 20px 20px; /* Increased padding for more space */
+    border-radius: 8px;
+    max-width: 75%; /* Adjusted width to keep messages from being too wide */
+    position: relative; /* Position relative to the box */
+    word-wrap: break-word; /* Ensure long words wrap properly */
+}
+
+.user-message {
+    background-color: #d1e7dd;
+    align-self: flex-end; /* Align user messages to the right */
+    margin-left: auto; /* Ensure user messages are aligned to the right */
+}
+
+.bot-message {
+    background-color: #f8d7da;
+    align-self: flex-start; /* Align bot messages to the left */
+    margin-right: auto; /* Ensure bot messages are aligned to the left */
+}
+
+.profile-image {
+    width: 40px; /* Size of the profile image */
+    height: 40px; /* Size of the profile image */
+    border-radius: 50%; /* Make it circular */
+    position: absolute; /* Set position to absolute for offset */
+    top: 10px; /* Position from the top of the box */
+}
+
+.user-message .profile-image {
+    right: -50px; /* Position the image outside the message box */
+}
+
+.bot-message .profile-image {
+    left: -50px; /* Position the image outside the message box */
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+#send-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-btn:hover {
+    background-color: #357ab8;
+}
